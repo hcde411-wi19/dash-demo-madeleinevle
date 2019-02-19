@@ -39,6 +39,7 @@ app.layout = html.Div(children=[
                     text=file['name'],  # This line sets the cereal name as the points' labels.
                     marker={
                         'size': 10,
+                        'color': 'red',
                         'opacity': 0.7  # By making the points a bit transparent, it can alleviate the occlusion issue
                     }
                 )
