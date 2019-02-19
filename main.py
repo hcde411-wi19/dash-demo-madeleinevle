@@ -2,8 +2,8 @@
 
 # Note: import the app of what you are working on
 #from initial_demo import app
-from exercise1 import app
-# from exercise2 import app
+#from exercise1 import app
+from exercise2 import app
 # from exercise3 import app
 #from vis_scatter_plot import app
 
