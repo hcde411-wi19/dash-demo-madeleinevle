@@ -11,3 +11,6 @@ import dash_html_components as html
 # Data used
 ped_n = [26884, 26444, 25876, 24368, 23403, 36894, 32792]
 bike_n = [52401, 49449, 50209, 49692, 47971, 69437, 67752]
+
+app = dash.Dash(__name__, static_folder='static')
+
