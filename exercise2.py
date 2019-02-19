@@ -45,7 +45,7 @@ app.layout = html.Div(children=[
                 )
             ],
             'layout': {
-                'title': 'Cereal Correlations',
+                'title': 'Sugar in a Serving of Cereal',
                 # It is always a good practice to have axis labels.
                 # This is especially important in this case as the numbers are not trivial
                 'xaxis': {'title': 'Cups'},
