@@ -17,11 +17,11 @@ file = pd.read_csv('static/cereal.csv')
 app.layout = html.Div(children=[
 
     # set the page heading
-    html.H1(children='Sugar in Each Serving of Cereal'),
+    html.H1(children='Amount of Sugar vs Amount of Fat in Cereal'),
 
     # set the description underneath the heading
     html.Div(children='''
-        A demo to show the amount of sugar in a serving of cereal
+        A demo to show the amount of sugar vs amount of fat in cereal
     '''),
 
     # append the visualization to the page
@@ -32,7 +32,7 @@ app.layout = html.Div(children=[
             'data': [
                 go.Scatter(
                     x=file['cups'],
-                    y=file['sugars'],
+                    y=file['fat'],
                     mode='markers',
                     text=file['name'],  # This line sets the cereal name as the points' labels.
                     marker={
@@ -43,8 +43,8 @@ app.layout = html.Div(children=[
                 )
             ],
             'layout': {
-                'title': 'Sugar in a Serving of Cereal',
-                'xaxis': {'title': 'Cups'},
+                'title': 'Sugar vs Fat in Cereal',
+                'xaxis': {'title': 'Fat'},
                 'yaxis': {'title': 'Sugars'},
             }
         }
