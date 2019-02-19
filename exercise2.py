@@ -10,7 +10,7 @@ import pandas as pd
 # Create another visualization of your choice of data and chart type.
 # You can use pandas to help loading data, or just hard-coded the data is fine.
 
-# Data used
+# Data used in visualization
 app = dash.Dash(__name__, static_folder='static')
 file = pd.read_csv('static/cereal.csv')
 
@@ -30,8 +30,6 @@ app.layout = html.Div(children=[
         figure={
             # configure the data
             'data': [
-                # This is how we define a scatter plot. Note that it also uses "go.Scatter",
-                # but with the mode to be only "markers"
                 go.Scatter(
                     x=file['cups'],
                     y=file['sugars'],
@@ -40,14 +38,12 @@ app.layout = html.Div(children=[
                     marker={
                         'size': 10,
                         'color': 'red',
-                        'opacity': 0.7  # By making the points a bit transparent, it can alleviate the occlusion issue
+                        'opacity': 0.7
                     }
                 )
             ],
             'layout': {
                 'title': 'Sugar in a Serving of Cereal',
-                # It is always a good practice to have axis labels.
-                # This is especially important in this case as the numbers are not trivial
                 'xaxis': {'title': 'Cups'},
                 'yaxis': {'title': 'Sugars'},
             }
